@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Station</title>
+
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  </head>
+  <body>
+  	<div class="container">
+  		<div class="jumbotron">
+  			<h1><img src="{{data.icon_url}}"> Weather Station</h1>
+  		</div>
+  		<h2>Showing the last updated data from weather underground</h2>
+  		<ul>
+  			<li>Location {{data.location}}</li>
+  			<li>weather {{data.weather}}</li>
+  			<li>wind {{data.wind}}</li>
+  			<li>temp {{data.temp}}</li>
+  			<li>humidity {{data.humidity}}</li>
+  			<li>precip {{data.precip}}</li>
+  			<li>icon_url {{data.icon_url}}</li> 
+  			<li>observation_time {{data.observation_time}}</li>
+
+  		</ul>
+  	</div>
+    
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
